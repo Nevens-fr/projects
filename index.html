@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects — Nevens</title>
+  <meta name="description" content="Les projets de Nevens.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="./">NEVENS</a>
+    <nav>
+      <a href="#projects">Projets</a>
+      <a href="#add">Ajouter</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Portfolio</p>
+      <h1>Des idées<br><em>qui prennent forme.</em></h1>
+      <p class="intro">Une sélection de projets, d’expériences et de prototypes construits avec soin.</p>
+      <a class="button dark" href="#projects">Découvrir les projets <span>↓</span></a>
+    </section>
+
+    <section id="projects" class="projects-section">
+      <div class="section-title">
+        <h2>Projets</h2>
+        <span>01 — Collection</span>
+      </div>
+      <div id="project-grid" class="project-grid"></div>
+    </section>
+
+    <section id="add" class="add-section">
+      <div>
+        <p class="eyebrow">Mise à jour</p>
+        <h2>Ajouter un projet</h2>
+        <p>Les projets sont enregistrés dans votre navigateur.</p>
+      </div>
+
+      <form id="project-form">
+        <label>
+          Titre
+          <input name="title" required placeholder="Nom du projet">
+        </label>
+
+        <label>
+          Image (URL)
+          <input name="image" type="url" required placeholder="https://...">
+        </label>
+
+        <label class="wide">
+          Description
+          <textarea name="description" required placeholder="Décrivez le projet..."></textarea>
+        </label>
+
+        <button class="button dark" type="submit">
+          Ajouter le projet <span>→</span>
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Nevens
+    <span>Fait avec intention.</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
