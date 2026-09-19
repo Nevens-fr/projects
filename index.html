@@ -1,72 +1,80 @@
-<!doctype html>
-<html lang="fr">
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Projects — Nevens</title>
-  <meta name="description" content="Les projets de Nevens.">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novens Studio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="logo" href="./">NEVENS</a>
-    <nav>
-      <a href="#projects">Projets</a>
-      <a href="#add">Ajouter</a>
-    </nav>
-  </header>
+    <header>
+        <div class="logo-container">
+            <img src="assets/logo/logo_NS.png" alt="Novens Studio Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#completed">Completed Projects</a></li>
+                <li><a href="#in-progress">In Progress</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <section class="hero">
-      <p class="eyebrow">Portfolio</p>
-      <h1>Des idées<br><em>qui prennent forme.</em></h1>
-      <p class="intro">Une sélection de projets, d’expériences et de prototypes construits avec soin.</p>
-      <a class="button dark" href="#projects">Découvrir les projets <span>↓</span></a>
+    <section id="home" class="hero">
+        <h1>Welcome to Novens Studio</h1>
+        <p>Passionate Game Developers</p>
     </section>
 
-    <section id="projects" class="projects-section">
-      <div class="section-title">
-        <h2>Projets</h2>
-        <span>01 — Collection</span>
-      </div>
-      <div id="project-grid" class="project-grid"></div>
+    <section id="completed" class="projects">
+        <h2>Completed Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="assets/projects/Undying one.png?v=20260919" alt="Undying One">
+                <h3>Undying One</h3>
+                <p>Undying One is a tactical action RPG where every defeated enemy can be claimed for your army. Unlock new spells, raise the dead, command your forces, and endure ever-growing waves of power.</p>
+                <p><strong>Genres:</strong> Action, Indie, RPG, Strategy, Tactical RPG, Roguelite, 2D, Dark Fantasy</p>
+                <p><strong>Release Date:</strong> 27 Aug, 2026</p>
+                <p><strong>Steam:</strong><a href="https://store.steampowered.com/app/4209780/Undying_One/"> Undying One on Steam</a></p>
+            </div>
+            <!-- Game 2 removed until ready -->
+        </div>
     </section>
 
-    <section id="add" class="add-section">
-      <div>
-        <p class="eyebrow">Mise à jour</p>
-        <h2>Ajouter un projet</h2>
-        <p>Les projets sont enregistrés dans votre navigateur.</p>
-      </div>
-
-      <form id="project-form">
-        <label>
-          Titre
-          <input name="title" required placeholder="Nom du projet">
-        </label>
-
-        <label>
-          Image (URL)
-          <input name="image" type="url" required placeholder="https://...">
-        </label>
-
-        <label class="wide">
-          Description
-          <textarea name="description" required placeholder="Décrivez le projet..."></textarea>
-        </label>
-
-        <button class="button dark" type="submit">
-          Ajouter le projet <span>→</span>
-        </button>
-      </form>
+    <section id="in-progress" class="projects">
+        <h2>In Progress</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="assets/projects/Beyond The Line.png" alt="Beyond The Line">
+                <h3>Beyond The Line</h3>
+                <p>A fleet-management strategy game about surviving behind enemy lines, where every ship, crew member and resource matters.</p>
+                <p><strong>State:</strong> Prototype</p>
+            </div>
+        </div>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="assets/projects/Publisher Inc.png" alt="Publisher Inc">
+                <h3>Publisher Inc</h3>
+                <p>Manage a thriving video game publishing empire! Sign exclusive deals, market blockbuster titles, optimize distribution networks, and watch your portfolio grow. Balance budgets, negotiate with developers, and build a legacy in the gaming industry.</p>
+                <p><strong>State:</strong> Prototype</p>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    © 2026 Nevens
-    <span>Fait avec intention.</span>
-  </footer>
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
 
-  <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2026 Novens Studio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
