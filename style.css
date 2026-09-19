@@ -24,6 +24,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
+    overflow: hidden; /* Empêche le contenu de dépasser du header */
 }
 
 .logo-container {
@@ -40,6 +41,14 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 2rem;
+    overflow-x: auto; /* Permet le scroll horizontal si le menu est trop long */
+    white-space: nowrap; /* Empêche les liens de passer à la ligne */
+    padding-right: 1rem; /* Espace pour le scroll */
+    scrollbar-width: none; /* Cache la barre de défilement (Firefox) */
+}
+
+nav ul::-webkit-scrollbar {
+    display: none; /* Cache la barre de défilement (Chrome, Safari) */
 }
 
 nav a {
@@ -47,6 +56,7 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
+    white-space: nowrap; /* Empêche le texte du lien de passer à la ligne */
 }
 
 nav a:hover {
@@ -153,6 +163,7 @@ a:hover {
     flex-direction: column;
     gap: 1rem;
     min-height: 300px;
+    padding: 2rem;
 }
 
 #contact-form input,
@@ -178,8 +189,7 @@ a:hover {
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s;
-    max-width: 100%;
-    width: fit-content;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -199,10 +209,14 @@ footer {
     header {
         flex-direction: column;
         gap: 1rem;
+        padding: 1rem 1rem; /* Réduit le padding sur mobile */
     }
 
     nav ul {
         gap: 1rem;
+        overflow-x: auto; /* Garde le scroll sur mobile si nécessaire */
+        white-space: nowrap;
+        padding-right: 1rem;
     }
 
     .hero h1 {
@@ -226,6 +240,9 @@ footer {
         aspect-ratio: 3.09 / 1;
     }
 }
+
+
+
 
 
 
