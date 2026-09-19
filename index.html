@@ -9,7 +9,7 @@
 <body>
     <header>
         <div class="logo-container">
-            <img src="assets/logo/logo_NS.png" alt="Novens Studio Logo" class="logo">
+            <img src="assets/logo/logo_NS1.png" alt="Novens Studio Logo" class="logo">
         </div>
         <nav>
             <ul>
@@ -63,12 +63,15 @@
 
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
-        <form id="contact-form">
+        <form id="contact-form" action="https://formsubmit.co/myvgt.helper@gmail.com" method="POST" enctype="text/plain">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" placeholder="Your Message" required></textarea>
             <button type="submit">Send</button>
         </form>
+        <!-- Hidden inputs for FormSubmit -->
+        <input type="hidden" name="_next" value="https://novensstudio.com/contact/thank-you">
+        <input type="hidden" name="_subject" value="New Contact Form Submission from Novens Studio Website">
     </section>
 
     <footer>
@@ -76,5 +79,14 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            this.submit();
+            setTimeout(function() {
+                window.location.href = "https://formsubmit.co/myvgt.helper@gmail.com?h=thank-you-page=true";
+            }, 1000);
+        });
+    </script>
 </body>
 </html>

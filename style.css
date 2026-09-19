@@ -152,6 +152,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    min-height: 300px;
 }
 
 #contact-form input,
@@ -168,15 +169,18 @@ a:hover {
 }
 
 #contact-form button {
-    padding: 1rem;
+    padding: 0.8rem;
     background: #00d4ff;
     color: #1a1a2e;
     border: none;
     border-radius: 5px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s;
+    max-width: 100%;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 #contact-form button:hover {
@@ -222,5 +226,6 @@ footer {
         aspect-ratio: 3.09 / 1;
     }
 }
+
 
 
